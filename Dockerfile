@@ -50,6 +50,7 @@ COPY . .
 RUN npm run build
 
 # Expose port
+# Expose port
 EXPOSE 3001
 
 # Start the app
