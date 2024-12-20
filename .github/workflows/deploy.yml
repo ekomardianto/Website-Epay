@@ -73,7 +73,7 @@ jobs:
             docker pull ${{ vars.IMAGE_NAME }}:latest
             echo "Running the container..."
             docker run -d \
-              -p 3033:3033 \
+              -p 3033:3000 \
               --name ${{ vars.CONTAINER_NAME }} \
               -e NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }} \
               -e BACKEND_API_BASEURL=${{ secrets.BACKEND_API_BASEURL }} \
