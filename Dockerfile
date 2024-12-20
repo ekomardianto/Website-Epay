@@ -51,7 +51,7 @@ RUN npm run build
 
 # Expose port
 # Expose port
-EXPOSE 3001
+EXPOSE 3033
 
 # Start the app
 CMD ["npm", "start"]
