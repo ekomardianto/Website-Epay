@@ -47,7 +47,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/pgapi_frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ vars.CONTAINER_NAME }}:latest
           build-args: |
             NEXT_PUBLIC_BACKEND_API_BASEURL=${{ secrets.NEXT_PUBLIC_BACKEND_API_BASEURL }}
             NEXT_PUBLIC_URL_PARAM_ENCRYPT_KEY=${{ secrets.NEXT_PUBLIC_URL_PARAM_ENCRYPT_KEY }}
@@ -73,7 +73,7 @@ jobs:
             docker pull ${{ vars.IMAGE_NAME }}:latest
             echo "Running the container..."
             docker run -d \
-              -p 3000:3000 \
+              -p 3033:3033 \
               --name ${{ vars.CONTAINER_NAME }} \
               -e NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }} \
               -e BACKEND_API_BASEURL=${{ secrets.BACKEND_API_BASEURL }} \
