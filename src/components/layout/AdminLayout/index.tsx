@@ -20,21 +20,6 @@ const listSidebarItems = [
     ref: "/admin/users",
     icon: "bxs-group",
   },
-  // {
-  //     title: 'Wewenang User',
-  //     url: '/admin/roleuser',
-  //     icon: 'bxs-user-check',
-  // },
-  // {
-  //     title: 'Instansi',
-  //     url: '/admin/instansi',
-  //     icon: 'bxs-store-alt',
-  // },
-  // {
-  //     title: 'Member Page',
-  //     url: '/member',
-  //     icon: 'bxs-user-account',
-  // }
 ];
 const AdminLayout = (props: Proptypes) => {
   const { children } = props;
